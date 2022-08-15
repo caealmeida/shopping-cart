@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+  font-family: Epilogue, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(246, 246, 246);
+}
+
+.header {
+  position: relative;
+  background-color: rgb(40, 40, 40);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+
+.container-title {
+  width: 80%;
+}
+
+.title {
+  color: rgb(221, 221, 221);
+  font-size: 30px;
+  padding-left: 30px;
+}
+
+.container-cartTitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgb(79, 79, 79);
+  width: 71%;
+  height: 100%;
+  margin-left: 30px;
+}
+
+.container-cartTitle span {
+  z-index: 1;
+}
+
+.container-cartTitle:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 61.5%;
+  width: 39.5%;
+  height: 15px;
+  background: rgb(79, 79, 79);
+  transform: skew(-45deg);
+  z-index: 0;
+}
+
+.container-cartTitle:before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: 61.5%;
+  width: 39.5%;
+  height: 15px;
+  background: rgb(79, 79, 79);
+  transform: skew(45deg);
+  z-index: 0;
+}
+
+.container-cartTitle .cart__title {
+  color: rgb(214, 171, 51);
+  font-size: 20px;
+  padding-left: 35px;
+  font-weight: 700;
+  width: 287px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.title strong {
+  color: rgb(214, 171, 51);
+}
+
+.items {
+  display: flex;
+  flex-basis: 70%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 5px;
+  width: 200px;
+  border: 2px solid rgb(234, 234, 233);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.item:hover {
+  box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
+}
+
+.item .item__sku {
+  display: none;
+}
+
+.item .item__title {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.item .item__image {
+  width: 100%;
+}
+
+.item .item__add {
+  background-color: rgb(214, 171, 51);
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 10px;
+  color: rgb(246, 246, 246);
+}
+
+.item .item__add:hover {
+  color: rgb(40, 40, 40);
+  font-weight: 900;
+  background-color: rgb(255, 203, 61);
+  box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0 30px 60px -30px, rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
+  transform: translateY(-2px);
+}
+
+.item .item__add:active {
+  transform: translateY(0);
+  box-shadow: inset rgb(255, 243, 112) 0 0 10px 0;
+}
+
+.cart {
+  display: flex;
+  flex-basis: 32%;
+  flex-flow: column wrap;
+  background-color: rgb(241, 241, 238);
+  height: 100vh;
+}
+
+.cart .cart__items {
+  height: 500px;
+  overflow-y: scroll;
+  margin-left: 25px;
+}
+
+.cart__item {
+  margin: 25px 0;
+}
+
+.empty-cart {
+  width: 170px;
+  height: 35px;
+  margin: 0 auto;
+  border: 2px solid rgb(214, 171, 51);
+  background-color: rgb(249, 249, 246);
+}
+
+.empty-cart:hover {
+  color: rgb(40, 40, 40);
+  font-weight: 900;
+  background-color: rgb(214, 171, 51);
+  box-shadow: rgba(40, 40, 40, 0.5) 0 5px 10px -2px,
+    rgba(0, 0, 0, 0.3) 0 30px 60px -30px, rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.empty-cart:active {
+  transform: translateY(0);
+  border: 2px solid rgb(255, 203, 61);
+  box-shadow: inset rgba(255, 203, 61, 0.5) 0 -2px 6px 0;
+}
+
+.price-container {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.total-price {
+  font-weight: 900;
+}
+
+.search-container {
+  display: flex;
+}
+
+.search-bar {
+  width: 250px;
+  height: 2.5em;
+  background-color: rgb(246, 246, 246);
+  border: 2px solid rgb(79, 79, 79);
+  border-radius: 8px;
+  padding: 3px 5px;
+  color: rgb(40, 40, 40);
+}
+
+.search-bar:focus {
+  border: 2px solid rgb(214, 171, 51);
+  outline: none;
+}
+
+.search-btn {
+  margin: 0 25px 0 10px;
+  color: rgb(214, 171, 51);
+  font-size: 12px;
+  font-weight: 600;
+  background-color: rgb(40, 40, 40);
+  border: 1px solid rgb(79, 79, 79);
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+}
+
+.search-btn:hover {
+  background-color: rgb(79, 79, 79);
+  border: 1px solid rgb(40, 40, 40);
+  box-shadow: rgba(197, 197, 197, 0.25) 0 5px 15px,
+    rgba(0, 0, 0, 0.35) 0 -2px 6px 0 inset;
+  transform: translateY(-2px);
+}
+
+.search-btn:active {
+  border-color: rgb(214, 171, 51);
+  box-shadow: rgba(214, 171, 51, 0.5)  0 2px 5px 0;
+  transform: translateY(0);
+}
